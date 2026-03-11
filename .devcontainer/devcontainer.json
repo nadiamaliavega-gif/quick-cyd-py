@@ -4,5 +4,5 @@
     "extensions": [
         "ms-python.python"
     ],
-    "postCreateCommand": "pip install debugpy"
+    "postCreateCommand": "pip install --upgrade pip && pip install debugpy requests"
 }
