@@ -58,24 +58,23 @@ print()
 while score < 21:
     print('would you like to hit or stand?')
     x = input()
-    print('you chose to'+ x)
+    print('you chose to '+ x)
     if x == 'hit':
-       card = live_deck[random.randint(0,len(live_deck)-1)]
-    hand.append(card)
-    live_deck.remove(card)
+        card = live_deck[random.randint(0,len(live_deck)-1)]
+        hand.append(card)
+        live_deck.remove(card)
 
-show_card(card)
-print('your hand',hand)
-if card == 'ace':
-            print('you got an ace! one or eleven?')
-            x = input()
-            if x == 'one': card = 'ace_1'
-            elif x == 'eleven': card = 'ace_11'
-score += card_values[card]
-
-print('You stood, see if someone can beat',score)
-if score == 21:
-    print('woah you win')
-else: print('you lose')
-print('your score',score)
-print()
+        show_card(card)
+        print('your hand',hand)
+        if card == 'ace':
+                    print('you got an ace! one or eleven?')
+                    x = input()
+                    if x == 'one': card = 'ace_1'
+                    elif x == 'eleven': card = 'ace_11'
+        score += card_values[card]
+    else: 
+        print('You stood, see if someone can beat',score)
+    if score == 21:
+        print('woah you win')
+    else: print('you lose')
+    print('your score',score)
